@@ -1,4 +1,4 @@
-import { Portfolio } from './portfolio';
+import { Portfolio } from './portfolio.model';
 
 export const PORTFOLIOS: Portfolio[] = [
   {id: 21, name: 'Inside Chick-fil-A'},

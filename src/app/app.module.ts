@@ -1,14 +1,14 @@
-import { NgModule }                 from '@angular/core';
-import { BrowserModule }            from '@angular/platform-browser';
-import { HttpModule }               from '@angular/http';
+import { NgModule }               from '@angular/core';
+import { BrowserModule }          from '@angular/platform-browser';
+import { HttpModule }             from '@angular/http';
 
-import { AppRoutingModule }         from './app-routing.module';
+import { AppRoutingModule }       from './app-routing.module';
 
-import { AppComponent }             from './app.component';
-import { HomeComponent }            from './home.component';
-import { PortfolioDetailComponent } from './portfolio-detail.component';
-import { PortfoliosComponent }      from './portfolios.component';
-import { PortfolioService }         from './portfolio.service';
+import { AppComponent }           from './app.component';
+import { HomeComponent }          from './home/home.component';
+import { PortfolioItemComponent } from './portfolio/portfolio-item/portfolio-item.component';
+import { PortfolioListComponent } from './portfolio/portfolio-list/portfolio-list.component';
+import { PortfolioService }       from './portfolio/shared/portfolio.service';
 
 @NgModule({
   imports: [
@@ -19,8 +19,8 @@ import { PortfolioService }         from './portfolio.service';
   declarations: [
     AppComponent,
     HomeComponent,
-    PortfolioDetailComponent,
-    PortfoliosComponent
+    PortfolioItemComponent,
+    PortfolioListComponent
   ],
   providers: [ PortfolioService ],
   bootstrap: [ AppComponent ]

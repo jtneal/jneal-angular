@@ -1,6 +1,6 @@
-<h3>Top Portfolios</h3>
+<h3>Portfolio</h3>
 <div class="grid grid-pad">
-    <a *ngFor="let portfolio of portfolios" [routerLink]="['/portfolios', portfolio.id]" class="col-1-4">
+    <a *ngFor="let portfolio of portfolioList" [routerLink]="['/portfolio', portfolio.id]" class="col-1-4">
         <div class="module portfolio">
             <h4>{{portfolio.name}}</h4>
         </div>

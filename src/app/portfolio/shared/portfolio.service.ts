@@ -3,23 +3,23 @@ import 'rxjs/add/operator/toPromise';
 import { Injectable }    from '@angular/core';
 import { Http }          from '@angular/http';
 
-import { Portfolio }     from './portfolio';
+import { Portfolio }     from './portfolio.model';
 
 @Injectable()
 export class PortfolioService {
-  private portfoliosUrl = 'http://jneal.com/api/portfolio.php';
+  private portfolioUrl = 'http://jneal.com/api/portfolio.php';
 
   constructor(private http: Http) { }
 
-  getPortfolios(): Promise<Portfolio[]> {
-    return this.http.get(this.portfoliosUrl)
+  getPortfolioList(): Promise<Portfolio[]> {
+    return this.http.get(this.portfolioUrl)
                .toPromise()
                .then(response => response.json() as Portfolio[])
                .catch(this.handleError);
   }
 
   getPortfolio(id: number): Promise<Portfolio> {
-    const url = `${this.portfoliosUrl}?id=${id}`;
+    const url = `${this.portfolioUrl}?id=${id}`;
     return this.http.get(url)
                .toPromise()
                .then(response => response.json() as Portfolio)

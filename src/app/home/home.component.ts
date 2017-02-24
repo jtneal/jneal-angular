@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Portfolio }         from './portfolio';
-import { PortfolioService }  from './portfolio.service';
+import { Portfolio }         from '../portfolio/shared/portfolio.model';
+import { PortfolioService }  from '../portfolio/shared/portfolio.service';
 
 @Component({
   moduleId: module.id,
@@ -10,12 +10,12 @@ import { PortfolioService }  from './portfolio.service';
   styleUrls: [ './home.component.css' ]
 })
 export class HomeComponent implements OnInit {
-  portfolios: Portfolio[] = [];
+  portfolioList: Portfolio[] = [];
 
   constructor(private portfolioService: PortfolioService) { }
 
   ngOnInit(): void {
-    this.portfolioService.getPortfolios()
-      .then(portfolios => this.portfolios = portfolios.slice(0, 6));
+    this.portfolioService.getPortfolioList()
+      .then(portfolioList => this.portfolioList = portfolioList.slice(0, 6));
   }
 }

@@ -1,6 +1,6 @@
 <h2>Portfolio</h2>
-<ul class="portfolios">
-  <li *ngFor="let portfolio of portfolios"
+<ul class="portfolio-list">
+  <li *ngFor="let portfolio of portfolioList"
     [class.selected]="portfolio === selectedPortfolio"
     (click)="onSelect(portfolio)">
     <span class="badge">{{portfolio.id}}</span> {{portfolio.name}}
