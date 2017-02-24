@@ -1,0 +1,14 @@
+<h2>Portfolio</h2>
+<ul class="portfolios">
+  <li *ngFor="let portfolio of portfolios"
+    [class.selected]="portfolio === selectedPortfolio"
+    (click)="onSelect(portfolio)">
+    <span class="badge">{{portfolio.id}}</span> {{portfolio.name}}
+  </li>
+</ul>
+<div *ngIf="selectedPortfolio">
+  <h2>
+    {{selectedPortfolio.name | uppercase}}, Greenville, SC
+  </h2>
+  <button (click)="gotoDetail()">View Details</button>
+</div>
