@@ -1,116 +1,79 @@
-/* #docregion , quickstart, toh */
-/* Master Styles */
-h1 {
-  color: #369;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 250%;
-}
-h2, h3 {
-  color: #444;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: lighter;
+/**
+ * Root Elements
+ */
+html {
+  height: 100%;
 }
 body {
-  margin: 2em;
+  background: #000 repeating-linear-gradient(135deg, #000, #000 .85em, #111 0, #111 1.7em) fixed;
+  height: 100%;
 }
-/* #enddocregion quickstart */
-body, input[text], button {
-  color: #888;
-  font-family: Cambria, Georgia;
+
+/**
+ * Global Font Elements
+ */
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 1em;
 }
-/* #enddocregion toh */
-a {
-  cursor: pointer;
-  cursor: hand;
+h2 {
+  font-size: 1.2rem;
+}
+h3 {
+  font-size: 1.2rem;
+  margin: 1em 0 0;
 }
 button {
-  font-family: Arial;
-  background-color: #eee;
+  background-color: #a7500f;
   border: none;
-  padding: 5px 10px;
   border-radius: 4px;
+  color: #fff;
   cursor: pointer;
-  cursor: hand;
+  padding: 5px 10px;
 }
 button:hover {
-  background-color: #cfd8dc;
-}
-button:disabled {
-  background-color: #eee;
-  color: #aaa;
-  cursor: auto;
+  background-color: #ff7f00;
 }
 
-/* Navigation link styles */
-nav a {
-  padding: 5px 10px;
-  text-decoration: none;
-  margin-right: 10px;
-  margin-top: 10px;
-  display: inline-block;
+/**
+ * Global Structural Elements
+ */
+.container {
+  background-color: #fff;
+  box-shadow: 0 0 15px 5px #000;
+  padding: 0 0;
+}
+header,
+section,
+footer {
+  padding: 20px;
+}
+section img {
+  border: solid 1px #ccc;
+  padding: 1px;
+}
+.content--primary p {
+  margin: 1em 0 0 0;
+}
+.content--featured {
+  background: linear-gradient(#fff, #ddd);
+  padding-top: 0;
+}
+.content--secondary {
   background-color: #eee;
-  border-radius: 4px;
-}
-nav a:visited, a:link {
-  color: #607D8B;
-}
-nav a:hover {
-  color: #039be5;
-  background-color: #CFD8DC;
-}
-nav a.active {
-  color: #039be5;
+  border: solid 1px #ddd;
+  padding: 15px;
 }
 
-/* items class */
-.items {
-  margin: 0 0 2em 0;
-  list-style-type: none;
+/**
+ * Global Components
+ */
+.menu {
+  list-style: none;
+  margin: 0;
   padding: 0;
-  width: 24em;
 }
-.items li {
-  cursor: pointer;
-  position: relative;
-  left: 0;
-  background-color: #EEE;
-  margin: .5em;
-  padding: .3em 0;
-  height: 1.6em;
-  border-radius: 4px;
-}
-.items li:hover {
-  color: #607D8B;
-  background-color: #DDD;
-  left: .1em;
-}
-.items li.selected {
-  background-color: #CFD8DC;
-  color: white;
-}
-.items li.selected:hover {
-  background-color: #BBD8DC;
-}
-.items .text {
-  position: relative;
-  top: -3px;
-}
-.items .badge {
-  display: inline-block;
-  font-size: small;
-  color: white;
-  padding: 0.8em 0.7em 0 0.7em;
-  background-color: #607D8B;
-  line-height: 1em;
-  position: relative;
-  left: -1px;
-  top: -4px;
-  height: 1.8em;
-  margin-right: .8em;
-  border-radius: 4px 0 0 4px;
-}
-/* #docregion toh */
-/* everywhere else */
-* {
-  font-family: Arial, Helvetica, sans-serif;
+.menu li {
+  margin: 0;
+  padding: 0;
 }

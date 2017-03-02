@@ -1,0 +1,22 @@
+<section class="content--primary">
+  <div class="row">
+    <div class="content--portfolio--main col-12 col-sm-6 col-lg-8">
+      <h1>Skills</h1>
+      <div *ngFor="let skill of skills">
+        <h3>{{skill.title}}</h3>
+        <ul>
+          <li *ngFor="let item of skill.items">{{item}}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-lg-4">
+      <div class="content--secondary">
+        <p *ngFor="let logo of logos">
+          <a [href]="logo.url" target="_blank">
+            <img [alt]="logo.image" [src]="'/assets/images/skills/' + logo.image">
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

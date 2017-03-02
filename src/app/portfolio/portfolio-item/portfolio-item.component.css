@@ -1,29 +1,52 @@
-label {
-  display: inline-block;
-  width: 3em;
-  margin: .5em 0;
-  color: #607D8B;
-  font-weight: bold;
+/**
+ * Portfolio Featured
+ */
+img {
+  width: 100%;
 }
-input {
-  height: 2em;
-  font-size: 1em;
-  padding-left: .4em;
+
+/**
+ * Portfolio Primary
+ */
+h2 {
+  margin-top: 1em;
+}
+
+/**
+ * Portfolio Secondary
+ */
+h3:first-child {
+  margin-top: 0;
+}
+.content--secondary {
+  margin-top: 1em;
+}
+.content--secondary p {
+  margin-top: 0;
+}
+@media (min-width: 576px) {
+  .content--secondary {
+    margin-top: 0;
+  }
+}
+
+/**
+ * Go Back Button
+ */
+.content--primary {
+  padding-bottom: 74px;
+  position: relative;
 }
 button {
-  margin-top: 20px;
-  font-family: Arial;
-  background-color: #eee;
-  border: none;
-  padding: 5px 10px;
-  border-radius: 4px;
-  cursor: pointer; cursor: hand;
+  bottom: 20px;
+  left: 20px;
+  position: absolute;
 }
-button:hover {
-  background-color: #cfd8dc;
-}
-button:disabled {
-  background-color: #eee;
-  color: #ccc;
-  cursor: auto;
+@media (min-width: 576px) {
+  .content--primary {
+    padding-bottom: 20px;
+  }
+  .content--portfolio--main {
+    padding-bottom: 54px;
+  }
 }

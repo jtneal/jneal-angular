@@ -1,14 +1,4 @@
-<h2>Portfolio</h2>
-<ul class="portfolio-list">
-  <li *ngFor="let portfolio of portfolioList"
-    [class.selected]="portfolio === selectedPortfolio"
-    (click)="onSelect(portfolio)">
-    <span class="badge">{{portfolio.id}}</span> {{portfolio.name}}
-  </li>
-</ul>
-<div *ngIf="selectedPortfolio">
-  <h2>
-    {{selectedPortfolio.name | uppercase}}, Greenville, SC
-  </h2>
-  <button (click)="gotoDetail()">View Details</button>
-</div>
+<section class="content--primary">
+  <h1>Portfolio</h1>
+  <jneal-portfolio-preview [portfolioList]="portfolioList"></jneal-portfolio-preview>
+</section>

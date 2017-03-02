@@ -7,19 +7,27 @@ import { Portfolio }     from './portfolio.model';
 
 @Injectable()
 export class PortfolioService {
-  private portfolioUrl = 'http://jneal.com/api/portfolio.php';
+  private portfolioUrl = 'http://localhost/api/portfolio';
 
   constructor(private http: Http) { }
 
-  getPortfolioList(): Promise<Portfolio[]> {
-    return this.http.get(this.portfolioUrl)
-               .toPromise()
-               .then(response => response.json() as Portfolio[])
-               .catch(this.handleError);
+  getPortfolioList(url: string): Promise<Portfolio[]> {
+    return this.http.get(url)
+      .toPromise()
+      .then(response => response.json() as Portfolio[])
+      .catch(this.handleError);
+  }
+
+  getPortfolioAll(): Promise<Portfolio[]> {
+    return this.getPortfolioList(this.portfolioUrl);
+  }
+
+  getPortfolioRecent(): Promise<Portfolio[]> {
+    return this.getPortfolioList(`${this.portfolioUrl}?filter=recent`);
   }
 
   getPortfolio(id: number): Promise<Portfolio> {
-    const url = `${this.portfolioUrl}?id=${id}`;
+    const url = `${this.portfolioUrl}/${id}`;
     return this.http.get(url)
                .toPromise()
                .then(response => response.json() as Portfolio)

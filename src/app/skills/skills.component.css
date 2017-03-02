@@ -1,0 +1,11 @@
+/**
+ * Logos
+ */
+.content--secondary img {
+  border: 0;
+  padding: 0;
+  width: 100%;
+}
+.content--secondary p:first-child {
+  margin-top: 0;
+}

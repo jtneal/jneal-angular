@@ -1,0 +1,9 @@
+<div class="row">
+  <div class="col-12 col-sm-6 col-lg-4" *ngFor="let portfolio of portfolioList">
+    <jneal-portfolio-link [portfolio]="portfolio">
+      <img [alt]="portfolio.title" [src]="'/assets/images/uploads/' + portfolio.portfolio_image">
+      <h2>{{portfolio.title}}</h2>
+    </jneal-portfolio-link>
+    <p>{{portfolio.company_location}}</p>
+  </div>
+</div>
