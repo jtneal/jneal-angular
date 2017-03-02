@@ -12,114 +12,42 @@ import { SkillLogo } from './skills-logos.model';
 export class SkillsComponent {
   skills: Skill[] = [
     {
-      title: 'Back-end Technology (LAMP/LEMP)',
-      items: [
-        'Linux (Red Hat Enterprise Linux, Ubuntu, and others)',
-        'Nginx / Apache',
-        'MariaDB / MySQL',
-        'PHP 7 / PHP 5',
-        'Model-View-Controller (MVC)'
-      ]
-    },
-    {
-      title: 'Back-end Frameworks',
-      items: [
-        'Silex',
-        'Slim',
-        'FlightPHP',
-        'Laravel',
-        'CodeIgniter'
-      ]
-    },
-    {
-      title: 'Front-end Technology',
-      items: [
-        'HTML 5',
-        'CSS 3',
-        'JavaScript',
-        'AngularJS',
-        'jQuery',
-        'AJAX'
-      ]
-    },
-    {
+      title: 'Dev Ops',
+      items: [ 'Docker', 'Vagrant', 'Ubuntu', 'Nginx', 'Apache', 'MariaDB', 'MySQL', 'Redis', 'Memcached' ]
+    }, {
+      title: 'Back-end Languages/Frameworks',
+      items: [ 'PHP 7', 'NodeJS', 'Silex', 'Symfony', 'Laravel', 'CodeIgniter' ]
+    }, {
+      title: 'Front-end Languages/Frameworks',
+      items: [ 'Angular', 'TypeScript', 'jQuery', 'JavaScript', 'HTML 5', 'CSS 3' ]
+    }, {
       title: 'Content Management',
-      items: [
-        'ExpressionEngine',
-        'WordPress',
-        'Joomla'
-      ]
-    },
-    {
+      items: [ 'ExpressionEngine', 'WordPress', 'Joomla' ]
+    }, {
       title: 'Graphic Editors',
-      items: [
-        'Photoshop',
-        'Fireworks'
-      ]
-    },
-    {
+      items: [ 'Photoshop', 'Fireworks' ]
+    }, {
       title: 'Text Editors',
-      items: [
-        'PhpStorm IDE',
-        'Sublime Text 3',
-        'Vim',
-        'Joe\'s Own Editor'
-      ]
-    },
-    {
+      items: [ 'PhpStorm', 'Sublime Text 3', 'Vim' ]
+    }, {
       title: 'Version Control',
-      items: [
-        'Git / GitHub',
-        'Mercurial / Bitbucket'
-      ]
-    },
-    {
-      title: 'Minor Experience',
-      items: [
-        'SEO',
-        'Flash',
-        'ASP',
-        'ASP.NET/C#',
-        'Ruby on Rails',
-        'Python',
-        'Perl',
-        'ColdFusion'
-      ]
+      items: [ 'Git / GitHub', 'Mercurial / Bitbucket' ]
+    }, {
+      title: 'Lighter Experience',
+      items: [ 'ASP.NET / C#', 'Ruby on Rails', 'Python', 'Go Lang' ]
     }
   ];
 
   logos: SkillLogo[] = [
-    {
-      url: 'http://www.ubuntu.com/',
-      image: 'ubuntu.png'
-    },
-    {
-      url: 'http://nginx.org/',
-      image: 'nginx.png'
-    },
-    {
-      url: 'http://httpd.apache.org/',
-      image: 'apache.png'
-    },
-    {
-      url: 'http://mariadb.org/',
-      image: 'mariadb.png'
-    },
-    {
-      url: 'http://www.mysql.com/',
-      image: 'mysql.png'
-    },
-    {
-      url: 'http://www.php.net/',
-      image: 'php.png'
-    },
-    {
-      url: 'http://silex.sensiolabs.org/',
-      image: 'silex.png'
-    },
-    {
-      url: 'https://angularjs.org/',
-      image: 'angular.png'
-    }
+    { url: 'https://www.docker.com/',         image: 'docker.png' },
+    { url: 'https://www.ubuntu.com/',         image: 'ubuntu.png' },
+    { url: 'https://nginx.org/',              image: 'nginx.png' },
+    { url: 'https://mariadb.org/',            image: 'mariadb.png' },
+    { url: 'https://redis.io/',               image: 'redis.png' },
+    { url: 'https://secure.php.net/',         image: 'php.png' },
+    { url: 'http://silex.sensiolabs.org/',    image: 'silex.png' },
+    { url: 'https://nodejs.org/',             image: 'nodejs.png' },
+    { url: 'https://angular.io/',             image: 'angular.png' },
+    { url: 'https://www.typescriptlang.org/', image: 'typescript.png' }
   ];
 }
