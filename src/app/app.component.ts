@@ -12,7 +12,7 @@ import { PortfolioService }  from './portfolio/shared/portfolio.service';
 export class AppComponent implements OnInit {
   portfolioList: Portfolio[] = [];
 
-  constructor(private portfolioService: PortfolioService) { }
+  constructor(private portfolioService: PortfolioService) {}
 
   ngOnInit(): void {
     this.getPortfolioList();

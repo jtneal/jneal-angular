@@ -11,7 +11,7 @@ import { PortfolioService }  from '../shared/portfolio.service';
 export class PortfolioListComponent implements OnInit {
   portfolioList: Portfolio[];
 
-  constructor(private portfolioService: PortfolioService) { }
+  constructor(private portfolioService: PortfolioService) {}
 
   ngOnInit(): void {
     this.getPortfolioList();

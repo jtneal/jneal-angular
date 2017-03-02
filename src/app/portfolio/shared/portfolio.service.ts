@@ -1,15 +1,15 @@
 import 'rxjs/add/operator/toPromise';
 
-import { Injectable }    from '@angular/core';
-import { Http }          from '@angular/http';
+import { Injectable } from '@angular/core';
+import { Http }       from '@angular/http';
 
-import { Portfolio }     from './portfolio.model';
+import { Portfolio }  from './portfolio.model';
 
 @Injectable()
 export class PortfolioService {
   private portfolioUrl = 'http://localhost/api/portfolio';
 
-  constructor(private http: Http) { }
+  constructor(private http: Http) {}
 
   getPortfolioList(url: string): Promise<Portfolio[]> {
     return this.http.get(url)
@@ -29,9 +29,9 @@ export class PortfolioService {
   getPortfolio(id: number): Promise<Portfolio> {
     const url = `${this.portfolioUrl}/${id}`;
     return this.http.get(url)
-               .toPromise()
-               .then(response => response.json() as Portfolio)
-               .catch(this.handleError);
+      .toPromise()
+      .then(response => response.json() as Portfolio)
+      .catch(this.handleError);
   }
 
   private handleError(error: any): Promise<any> {

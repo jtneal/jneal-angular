@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { Skill } from './skills.model';
+import { Skill }     from './skills.model';
 import { SkillLogo } from './skills-logos.model';
 
 @Component({

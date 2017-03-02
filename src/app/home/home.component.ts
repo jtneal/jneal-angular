@@ -8,4 +8,4 @@ import { AppComponent } from '../app.component';
   templateUrl: './home.component.html',
   styleUrls: [ './home.component.css' ]
 })
-export class HomeComponent extends AppComponent { }
+export class HomeComponent extends AppComponent {}
