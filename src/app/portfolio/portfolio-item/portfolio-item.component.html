@@ -1,0 +1,28 @@
+<div *ngIf="portfolio">
+  <section class="content--featured">
+    <img [alt]="portfolio.title" [src]="'/assets/images/uploads/' + portfolio.portfolio_image">
+  </section>
+  <section class="content--primary">
+    <div class="row">
+      <div class="content--portfolio--main col-12 col-sm-6 col-lg-8">
+        <h1>Portfolio: {{portfolio.title}}</h1>
+        <p>{{portfolio.description}}</p>
+        <h2>Company Information:</h2>
+        <p [innerHTML]="portfolio.company_information"></p>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="content--secondary">
+          <h3>Location:</h3>
+          <p>{{portfolio.company_location}}</p>
+          <h3>Web Address:</h3>
+          <p><a [href]="portfolio.web_address" target="_blank">{{portfolio.web_address}}</a></p>
+          <h3>Project Completion:</h3>
+          <p>{{portfolio.entry_date * 1000 | date:'MMMM y'}}</p>
+          <h3>Skills Used:</h3>
+          <div [innerHTML]="portfolio.skills_used"></div>
+        </div>
+      </div>
+    </div>
+    <button (click)="goBack()">&laquo; Go Back</button>
+  </section>
+</div>

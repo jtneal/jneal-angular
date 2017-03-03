@@ -1,0 +1,119 @@
+/**
+ * Logo
+ */
+.logo {
+  text-align: center;
+}
+@media (min-width: 576px) {
+  .logo {
+    text-align: left;
+  }
+}
+
+/**
+ * Main Menu
+ */
+.menu--main {
+  padding-top: .5em;
+  text-align: center;
+}
+.menu--main li {
+  display: inline;
+}
+.menu--main li:before {
+  content: '\00a0/\00a0';
+  font-size: 1.3rem;
+}
+.menu--main li:first-child:before {
+  content: '';
+}
+@media (min-width: 992px) {
+  .menu--main {
+    font-size: .9rem;
+    padding-left: 12px;
+  }
+}
+@media (min-width: 1200px) {
+  .menu--main {
+    font-size: 1rem;
+    padding-left: 4px;
+  }
+}
+
+/**
+ * Social Menu
+ */
+.menu--social {
+  margin: 0 auto;
+  padding-top: .9em;
+  width: 82px;
+}
+.menu--social .icon {
+  background-image: url('/assets/images/social-icons.png');
+  float: left;
+  margin-left: 5px;
+}
+.menu--social .icon:first-child {
+  margin-left: 0;
+}
+.icon--facebook {
+  background-position: 0 0;
+}
+.icon--twitter {
+  background-position: -24px 0;
+}
+.icon--linkedin {
+  background-position: -48px 0;
+}
+.menu--social .icon a {
+  display: block;
+  height: 24px;
+  overflow: hidden;
+  text-indent: 100%;
+  width: 24px;
+}
+@media (min-width: 576px) {
+  .menu--social {
+    float: right;
+    margin: 0;
+  }
+}
+
+/**
+ * Footer
+ */
+footer {
+  background: #000 linear-gradient(45deg, #111, #111 .5px, #000 0);
+  background-size: 3px 3px;
+  color: #666;
+}
+footer p {
+  margin-bottom: 0;
+  margin-top: 1em;
+}
+footer h2 {
+  color: #fff;
+}
+footer .col-12 {
+  margin-top: 1em;
+}
+footer .col-12:first-child {
+  margin-top: 0;
+}
+footer .menu {
+  margin-top: 1em;
+}
+@media (min-width: 576px) {
+  footer .col-12 {
+    margin-top: 0;
+  }
+  .menu--friends,
+  .menu--favorite-technology{
+    margin-bottom: 1em;
+  }
+}
+@media (min-width: 992px) {
+  .menu {
+    margin-bottom: 0;
+  }
+}

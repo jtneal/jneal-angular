@@ -1,0 +1,57 @@
+{
+  "name": "jneal-angular",
+  "version": "1.0.0",
+  "description": "jneal.com - Angular 4 Application",
+  "scripts": {
+    "build": "tsc -p src/",
+    "build:watch": "tsc -p src/ -w",
+    "serve": "lite-server -c=bs-config.json",
+    "prestart": "npm run build",
+    "start": "concurrently \"npm run build:watch\" \"npm run serve\"",
+    "pretest": "npm run build",
+    "test": "concurrently \"npm run build:watch\" \"karma start karma.conf.js\"",
+    "pretest:once": "npm run build",
+    "test:once": "karma start karma.conf.js --single-run",
+    "lint": "tslint ./src/**/*.ts -t verbose"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jtneal/jneal-angular.git"
+  },
+  "dependencies": {
+    "@angular/common": "~4.0.0-beta",
+    "@angular/compiler": "~4.0.0-beta",
+    "@angular/core": "~4.0.0-beta",
+    "@angular/forms": "~4.0.0-beta",
+    "@angular/http": "~4.0.0-beta",
+    "@angular/platform-browser": "~4.0.0-beta",
+    "@angular/platform-browser-dynamic": "~4.0.0-beta",
+    "@angular/router": "~4.0.0-beta",
+
+    "bootstrap": "~4.0.0-alpha",
+    "systemjs": "0.20.9",
+    "core-js": "^2.4.1",
+    "rxjs": "5.0.1",
+    "zone.js": "^0.7.4"
+  },
+  "devDependencies": {
+    "concurrently": "^3.2.0",
+    "lite-server": "^2.2.2",
+    "typescript": "~2.1.5",
+
+    "canonical-path": "0.0.2",
+    "tslint": "^3.15.1",
+    "lodash": "^4.16.4",
+    "jasmine-core": "~2.4.1",
+    "karma": "^1.3.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-cli": "^1.0.1",
+    "karma-jasmine": "^1.0.2",
+    "karma-jasmine-html-reporter": "^0.2.2",
+    "rimraf": "^2.5.4",
+
+    "@types/node": "^6.0.46",
+    "@types/jasmine": "2.5.36"
+  }
+}

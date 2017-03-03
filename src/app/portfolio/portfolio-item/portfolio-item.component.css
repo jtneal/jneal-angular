@@ -1,0 +1,52 @@
+/**
+ * Portfolio Featured
+ */
+img {
+  width: 100%;
+}
+
+/**
+ * Portfolio Primary
+ */
+h2 {
+  margin-top: 1em;
+}
+
+/**
+ * Portfolio Secondary
+ */
+h3:first-child {
+  margin-top: 0;
+}
+.content--secondary {
+  margin-top: 1em;
+}
+.content--secondary p {
+  margin-top: 0;
+}
+@media (min-width: 576px) {
+  .content--secondary {
+    margin-top: 0;
+  }
+}
+
+/**
+ * Go Back Button
+ */
+.content--primary {
+  padding-bottom: 74px;
+  position: relative;
+}
+button {
+  bottom: 20px;
+  left: 20px;
+  position: absolute;
+}
+@media (min-width: 576px) {
+  .content--primary {
+    padding-bottom: 20px;
+  }
+  .content--portfolio--main {
+    padding-bottom: 54px;
+  }
+}

@@ -1,0 +1,25 @@
+/**
+ * Portfolio Preview List
+ */
+@media (min-width: 576px) {
+  .row {
+    padding: 0 5px;
+  }
+  .col-12 {
+    padding: 0 10px;
+  }
+}
+
+/**
+ * Portfolio Preview Item
+ */
+img {
+  max-width: 100%;
+}
+h2 {
+  font-size: 1em;
+  margin: .25em 0 0;
+}
+p {
+  margin: 0 0 1.2em;
+}

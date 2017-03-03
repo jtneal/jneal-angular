@@ -1,0 +1,16 @@
+/**
+ * Resume
+ */
+img {
+  border: 0;
+  padding: 0;
+  max-width: 100%;
+}
+.col-12 {
+  margin-top: 1em;
+  text-align: center;
+}
+.file--name,
+.file--size {
+  display: block;
+}

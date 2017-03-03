@@ -1,0 +1,20 @@
+/**
+ * Home Content
+ */
+.content--primary h1 {
+  margin-top: .75em;
+}
+@media (min-width: 768px) {
+  .content--primary h1 {
+    margin-top: 0;
+  }
+  .content--primary img {
+    float: right;
+    margin: 0 0 20px 20px;
+  }
+}
+@media (min-width: 992px) {
+  .content--primary img {
+    margin-bottom: 0;
+  }
+}
