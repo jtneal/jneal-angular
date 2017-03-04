@@ -7,7 +7,7 @@ import { Portfolio }  from './portfolio.model';
 
 @Injectable()
 export class PortfolioService {
-  private portfolioUrl = 'http://localhost/api/portfolio';
+  private portfolioUrl = '/api/portfolio';
 
   constructor(private http: Http) {}
 
