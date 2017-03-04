@@ -7,5 +7,4 @@ if (!/localhost/.test(document.location.host)) {
   enableProdMode();
 }
 
-console.log('Running AOT compiled');
 platformBrowser().bootstrapModuleFactory(AppModuleNgFactory);
